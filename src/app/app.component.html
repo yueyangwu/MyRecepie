@@ -1,14 +1,8 @@
-<!-- <app-header (recipesOutput)="onRecipesClicked($event)" (shoppingListOutput)="onShoppingListClicked($event)"></app-header> -->
-<app-header (output)="onLinkClicked($event)"></app-header>
+<app-header></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div *ngIf="linkClicked === 'Recipes Clicked'">
-                <app-recipes></app-recipes>
-            </div>
-            <div *ngIf="linkClicked === 'Shopping List Clicked'">
-                <app-shopping-list></app-shopping-list>
-            </div>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
